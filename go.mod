@@ -1,4 +1,4 @@
-module hub
+module github.com/WebmiRU/Yudole_hub
 
 go 1.25.0
 
