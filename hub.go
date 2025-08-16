@@ -7,9 +7,10 @@ import (
 	"fmt"
 	"io"
 	"log"
-	msg "github.com/WebmiRU/Yudole_multichat-msg"
 	"net"
 	"time"
+
+	msg "github.com/WebmiRU/Yudole_multichat-msg"
 )
 
 const RECONNECT_TIMEOUT = 5 * time.Second
@@ -22,7 +23,7 @@ func Connect(host, port string) {
 	ctx, cancel := context.WithCancel(context.Background()) // Контекст для отмены отправки данных в сокет Хаба
 	defer reconnect(cancel, host, port)
 
-	var conn, err = net.Dial("tcp", fmt.Sprintf("%s:%s", host, port)
+	var conn, err = net.Dial("tcp", fmt.Sprintf("%s:%s", host, port))
 
 	defer func() {
 		if conn != nil {
